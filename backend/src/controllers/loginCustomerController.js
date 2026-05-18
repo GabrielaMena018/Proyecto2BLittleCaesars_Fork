@@ -59,13 +59,13 @@ loginCustomerController.login = async (req, res) => {
       //#1- ¿que vamos a guardar?
       { id: customerFound._id, userType: "customer" },
       //#2- secret key
-      config.JWT.secret,
+      config.JWTsecret,
       //#3- Cuando expira
       { expiresIn: "30d" },
     );
 
     //El token lo guardamos en una cokie
-    res.cookie("authCookie", token);
+    res.cookie("authCookie", token, {maxAge: 30 * 24 * 60 * 60 * 1000});
 
     return res.status(200).json({ message: "Login successfully" });
   } catch (error) {

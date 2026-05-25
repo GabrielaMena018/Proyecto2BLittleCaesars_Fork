@@ -11,7 +11,7 @@ cartController.getAllCarts = async (req, res) => {
         //-_password
         const carts = await cartModel.find()
         .populate("customerId", "name email")
-        .populate("productId", "name price")
+        .populate("products.productId", "name price")
 
         return res.status(200).json(carts)
     } catch (error) {

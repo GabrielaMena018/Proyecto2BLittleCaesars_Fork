@@ -37,10 +37,6 @@ cartController.insertCart = async (req, res) => {
     for (let i = 0; i < products.length; i++) {
       //Buscar el producto en la base de datos
       const pizzaFound = await pizzasModel.findById(products[i].productId);
-      if(!pizzaFound){
-              const plantaFound = await plantaModel.findById(products[i].productId);
-
-      }
 
       //Calcular el subtotal
       const subtotal = pizzaFound.price * products[i].quantity;

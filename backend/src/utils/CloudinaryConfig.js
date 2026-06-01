@@ -15,7 +15,7 @@ const storage = new CloudinaryStorage({
   cloudinary,
   params: {
     folder: "grupo2B",
-    allowed_formats: ["jpg", "png", "jpeg", "gif"]
+    allowed_formats: ["jpg", "png", "jpeg", "gif", "pdf"]
   },
 });
 

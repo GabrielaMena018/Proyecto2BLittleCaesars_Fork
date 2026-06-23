@@ -1,5 +1,5 @@
 import jsonwebtoken from "jsonwebtoken";
-import { confiig } from "../../config.js";
+import { config } from "../../config.js";
 
 export const validateAuthCookie = (allowedTypes = []) => {
     return (req, res, next) => {

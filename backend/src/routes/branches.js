@@ -16,6 +16,6 @@ router
 router
   .route("/:id")
   .put(branchescontoller.updateBranches)
-  .delete(validateAuthCookie(["admin"]),branchesController.deleteBranches);
+  .delete(validateAuthCookie(["admin"]),branchescontoller.deleteBranches);
 
 export default router;

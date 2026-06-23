@@ -1,5 +1,5 @@
 import express from "express";
-import branchescpntoller from "../controllers/branchesController.js";
+import branchescontoller from "../controllers/branchesController.js";
 import { validateAuthCookie } from "../middlewares/authMiddleware.js";
 
 //Router() nos ayuda a colocar los métodos
@@ -8,14 +8,14 @@ const router = express.Router();
 
 router
   .route("/")
-  .get( branchescpntoller.getbranches)
-  .post(branchescpntoller.insertBranches);
+  .get( branchescontoller.getbranches)
+  .post(branchescontoller.insertBranches);
 
 
 
 router
   .route("/:id")
-  .put(branchesController.updateBranches)
+  .put(branchescontoller.updateBranches)
   .delete(validateAuthCookie(["admin"]),branchesController.deleteBranches);
 
 export default router;

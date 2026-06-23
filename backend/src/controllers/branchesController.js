@@ -1,7 +1,7 @@
 //#2- Importo el Schema de la colección que voy a ocupar
 import branchesModel from "../models/branches.js";
 
-branchesController = [];
+branchesController = {};
 
 //SELECT
 branchesController.getbranches = async (req, res) => {

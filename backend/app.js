@@ -28,7 +28,7 @@ app.use(
 app.use(cookieParser());
 
 app.use(express.json());
-app.use("/api/pizzas", pizzaRoutes);
+app.use("/api/pizzas", pizzaRoutesxd);
 app.use("/api/branches", branchesRoutes);
 app.use("/api/employee", validateAuthCookie(["customer"]), employeesRoutes);
 app.use("/api/customers", customerRoutes);
